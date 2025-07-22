@@ -6,8 +6,8 @@
 // ==============================================
 // CONFIGURATION - UPDATE THESE VALUES
 // ==============================================
-const char* WIFI_SSID = "RADZKI";           // Replace with your WiFi SSID
-const char* WIFI_PASSWORD = "bogdan179";   // Replace with your WiFi password
+const char* WIFI_SSID = "ssid";           // Replace with your WiFi SSID
+const char* WIFI_PASSWORD = "pwd";   // Replace with your WiFi password
 const char* WEBSOCKET_HOST = "192.168.15.26";          // Replace with WebSocket server IP/hostname
 const int WEBSOCKET_PORT = 8001;                         // Replace with WebSocket server port
 const char* WEBSOCKET_PATH = "/";                        // WebSocket path (usually "/" unless specified)

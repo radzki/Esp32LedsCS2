@@ -1,0 +1,50 @@
+#include <Arduino.h>
+#include <FastLED.h>
+
+#define LED_PIN         2        
+#define NUM_LEDS        200
+#define LED_TYPE        WS2815
+
+CRGB leds[NUM_LEDS];
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("=== Simple LED Test ===");
+  
+  FastLED.addLeds<LED_TYPE, LED_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.setBrightness(10);
+  
+  Serial.println("LEDs initialized. Starting test...");
+}
+
+void loop() {
+  // Test 1: Red
+  Serial.println("Red");
+  fill_solid(leds, NUM_LEDS, CRGB::Red);
+  FastLED.show();
+  delay(100);
+  
+  // Test 2: Green  
+  Serial.println("Green");
+  fill_solid(leds, NUM_LEDS, CRGB::Green);
+  FastLED.show();
+  delay(100);
+  
+  // Test 3: Blue
+  Serial.println("Blue");
+  fill_solid(leds, NUM_LEDS, CRGB::Blue);
+  FastLED.show();
+  delay(100);
+  
+  // Test 4: White
+  Serial.println("White");
+  fill_solid(leds, NUM_LEDS, CRGB::White);
+  FastLED.show();
+  delay(100);
+  
+  // Test 5: Off
+  //Serial.println("Off");
+  //fill_solid(leds, NUM_LEDS, CRGB::Black);
+  //FastLED.show();
+  //delay(1000);
+} 
